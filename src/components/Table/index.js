@@ -1,19 +1,7 @@
-import React, { useState } from 'react';
-import { Table, Layout, Menu, } from 'antd';
+import React from 'react';
+import { Table,  } from 'antd';
 import { getAllUsers } from '../Containers/AllUsers/actions';
-import { useDispatch, useSelector } from 'react-redux';
-
-
-// rowSelection object indicates the need for row selection
-const rowSelection = {
-  onChange: (selectedRowKeys, selectedRows) => {
-    console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
-  },
-  getCheckboxProps: record => ({
-    disabled: record.name === 'Disabled User', // Column configuration not to be checked
-    name: record.name,
-  }),
-};
+import { useDispatch } from 'react-redux';
 
 const Demo = (props) => {
   const { data, columns } = props;

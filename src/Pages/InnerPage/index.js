@@ -1,26 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Layout } from 'antd';
-import { useDispatch, useSelector } from 'react-redux';
 import Sidebar from '../../components/Sidebar';
-import AllUsers from '../Users';
+import * as S from './styles';
 
-const { Header, Content, Footer, Sider } = Layout;
+const { Header, Content, Sider } = Layout;
 
-const InnerPage = ({children}) => {
+const InnerPage = ({ children }) => {
   return (
     <Layout>
-      <Sider style={{border: '1px solid red', width: '400px'}}><Sidebar /></Sider>
+      <Sider><Sidebar /></Sider>
       <Layout>
         <Header className="site-layout-background"></Header>
-        
-        <Content style={{
-          padding: 24,
-          margin: 0,
-          minHeight: '100vh',
-          border: '1px solid grey',
-          // width: '700px'
-        }}>
-                {children}
+        <Content style={S.content}>
+         
+            {children}
         </Content>
       </Layout>
     </Layout>

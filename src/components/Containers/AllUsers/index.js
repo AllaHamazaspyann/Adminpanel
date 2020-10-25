@@ -9,7 +9,6 @@ import * as S from './styles';
 import Table from '../../Table';
 
 
-
 const AllUsers = () => {
   const dispatch = useDispatch();
   const history = useHistory();
@@ -69,14 +68,16 @@ const AllUsers = () => {
         return status && status.map((item) => {
           return (
             <span>
-              <EditFilled 
-                onClick={() => {console.log('heyheyehey'); history.push({
-                  pathname: '/editUser',
-                  userId: item.id 
-                })}} 
+              <EditFilled
+                onClick={() => {
+                  console.log('heyheyehey'); history.push({
+                    pathname: '/editUser',
+                    userId: item.id
+                  })
+                }}
                 style={S.editIcon} />
-              <DeleteFilled 
-                onClick={() => history.push(`/editUser?id=${item.id}`)} 
+              <DeleteFilled
+                onClick={() => history.push(`/editUser?id=${item.id}`)}
                 style={S.deleteIcon} />
             </span>
           )
@@ -86,7 +87,7 @@ const AllUsers = () => {
     },
   ];
   return (
-    <Table data={users} columns={columns} />
+      <Table data={users} columns={columns} />
   )
 }
 

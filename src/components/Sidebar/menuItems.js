@@ -31,7 +31,7 @@ export const menuItems = [
   },
   {
     name: 'Learn',
-    icon: <UserOutlined />,
+    icon: <UserOutlined style={{marginLeft: '20px', display: 'inline-block'}}/>,
     isCollapsable: true,
     subItems: ['Quick Start', 'Recipes', 'Books', 'Movies', 'Dietician']
   },

@@ -1,8 +1,5 @@
 const initialState = {
     allUsers: [],
-    name: '',
-    email: '',
-    location: '',
     singleUser: {}
   }
   
